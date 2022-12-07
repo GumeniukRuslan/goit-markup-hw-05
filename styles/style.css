@@ -51,6 +51,19 @@ p, ul{
 }
 .link.current {
   color: var(--accent-color);
+  
+}
+.current::after{
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  background-color: var(--accent-color);
+  height: 4px;
+  border-radius: 2px;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%, 0%);
 }
 
 .section-title{
@@ -82,6 +95,11 @@ p, ul{
   color: #212121;
   font-weight: 500;
   line-height: 1.14;
+  padding-top:  32px;
+  padding-bottom: 32px;
+  position: relative;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .navigation:hover,
 .navigation:focus{
@@ -91,9 +109,11 @@ p, ul{
   display: flex;
   align-items: center;
 }
+
 .nav-list {
   margin-left: 93px;
 }
+
 .nav-list .item:not(:last-child){
   margin-right: 50px;
 }
@@ -115,6 +135,8 @@ p, ul{
   color: var(--second-color);
   font-weight: 500;
   line-height: 1.14;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-header:hover,
 .contacts-header:focus {
@@ -164,6 +186,8 @@ p, ul{
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 .hero-btn:hover,
 .hero-btn:focus{
@@ -215,6 +239,24 @@ p, ul{
 
 .work-list .item:not(:last-child){
   margin-right: 30px;
+}
+
+.work-thumb {
+  position: relative;
+}
+.work-thumb-text{
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  background-color: rgba(47, 48, 58, 0.8);
+  padding-top: 27px;
+  padding-bottom: 27px;
+  text-align: center;
+  width: 100%;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 .work{
   padding-bottom: 94px;
@@ -282,10 +324,14 @@ p, ul{
   display: inline-block;
   color: #AFB1B8;
   padding: 12px;
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+   color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-link:hover,
 .social-link:focus{
-  border-radius: 50%;
+  
   color: #fff;
   background-color: var(--accent-color);
 }
@@ -312,6 +358,8 @@ padding-bottom: 94px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   color: #AFB1B8;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .company-icon{
   fill: currentColor;
@@ -339,6 +387,8 @@ padding-bottom: 94px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #FFFFFF;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contacts{
   margin-top: 20px;
@@ -350,6 +400,8 @@ padding-bottom: 94px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .google-adress:hover,
 .google-adress:focus,
@@ -394,6 +446,10 @@ padding-bottom: 94px;
   letter-spacing: 0.03em;
   color: var(--main-color);
   padding: 6px 22px;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter:hover, 
 .filter:focus{
@@ -428,6 +484,32 @@ padding-bottom: 94px;
 }
 .example{
   width: calc((100% - 60px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.example-thumb{
+  position: relative;
+  overflow: hidden;
+}
+.example-overlay{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.example-overlay-text{
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
+}
+.example:hover .example-overlay{
+  transform: translateY(0%);
 }
 .example:hover,
 .example:focus{
