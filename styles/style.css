@@ -43,7 +43,7 @@ p, ul{
 }
 .logo-link {
   color: var(--accent-color);
-  font-family: 'Raleway';
+  font-family: 'Raleway' sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -221,7 +221,7 @@ p, ul{
   min-width: 216px;
   cursor: pointer;
   padding: 10px 32px;
-  font-family: 'Roboto';
+  font-family: 'Roboto' sans-serif;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -467,6 +467,30 @@ padding-bottom: 94px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   color: #fff;
+}
+.subscribe-label{
+  display: block;
+}
+.subscribe-form{
+  margin-left: 70px;
+}
+.email-input{
+  border: 1px solid #AFB1B8;
+  background-color: inherit;
+}
+.subscribe-btn{
+  color: #ffffff;
+  background-color: var(--accent-color);
+  border: none;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  min-width: 216px;
+  cursor: pointer;
+  padding: 5px 32px;
+  font-family: 'Roboto' sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
 }
 
 
