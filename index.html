@@ -366,14 +366,14 @@
           </label>
           <textarea class="modal-form-input modal-form-textarea" 
           id="comment" cols="30" rows="10" placeholder="Введіть текст"></textarea>
-          <div class="checkbox">
-            <input type="checkbox" id="rules" class="checkbox-appearence">
+          <label class="checkbox-label" for="rules">
+            <input type="checkbox" id="rules" class="checkbox-input">
             <svg width="16" height="15" class="check-icon">
               <use href="./images/icons.svg#icon-check"></use>
             </svg>
-            <label class="checkbox-label" for="rules">Погоджуюся з розсилкою та приймаю 
-              <a href="#" class="rules-link">Умови договору</a></label>
-          </div>
+            Погоджуюся з розсилкою та приймаю &nbsp
+            <a href="#" class="rules-link">Умови договору</a>
+          </label>
           <button type="submit" class="send-btn">Відправити</button>
         </form>
       </div>
