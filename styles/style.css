@@ -119,7 +119,104 @@ p, ul{
 .close-btn:hover{
   fill: var(--accent-color);
 }
+.modal-input-position{
+  position: relative;
+}
+.modal-title{
+  text-align: center;
+  margin-bottom: 12px;
+}
+.modal-from-label{
+  margin-bottom: 4px;
+  display: block;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+.modal-form-input{
+  display: block;
+  width: 448px;
+  padding: 12px 42px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1.166;
+  letter-spacing: 0.01em;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
+.modal-form-svg {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus,
+.modal-form-input:focus + .modal-form-svg{
+border-color: var(--accent-color);
+fill: var(--accent-color);
+}
 
+.modal-form-textarea{
+  resize: none;
+  padding: 12px 16px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+.modal-form-textarea::placeholder{
+  color: rgba(117, 117, 117, 0.5);
+}
+.checkbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.checkbox-label{
+  margin-left: 7px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+.checkbox-appearence{
+  appearance: none;
+}
+.check-icon {
+  fill: #fff;
+  border: 2px black solid;
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.checkbox-appearence:checked + .check-icon{
+  background-color: var(--accent-color);
+  border-color: transparent;
+}
+.rules-link{
+  color: var(--accent-color);
+}
+.send-btn{
+display: block;
+margin-left: auto;
+margin-right: auto;
+padding: 10px 52px;
+cursor: pointer;
+font-weight: 700;
+font-size: 16px;
+line-height: 1.875;
+letter-spacing: 0.06em;
+color: #ffffff;
+background-color: var(--accent-color);
+border: none;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+border-radius: 4px;
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.send-btn:hover{
+  background-color: #188CE8;
+}
 /* header */
 .header{
   border-bottom: 1px solid #ECECEC;
